@@ -31,7 +31,7 @@ vector<Overcoat> Shop::findByType(const string& type) const {
 
 void Shop::sortInventoryByPrice() {
     sort(inventory.begin(), inventory.end(), [](const Overcoat& a, const Overcoat& b) {
-        return a.getPrice() < b.getPrice();
+        return a < b;
         });
 }
 

@@ -61,24 +61,24 @@ bool Overcoat::operator<=(const Overcoat& other) const {
 }
 
 Overcoat& Overcoat::operator++() {
-    ++size;
+    size += 2;
     return *this;
 }
 
 Overcoat Overcoat::operator++(int) {
     Overcoat temp = *this;
-    ++(*this);
+    size += 2;
     return temp;
 }
 
 Overcoat& Overcoat::operator--() {
-    --size;
+    size -= 2;
     return *this;
 }
 
 Overcoat Overcoat::operator--(int) {
     Overcoat temp = *this;
-    --(*this);
+    size -= 2;
     return temp;
 }
 
